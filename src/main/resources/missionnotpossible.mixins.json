@@ -1,0 +1,13 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "io.github.therookiecoder.missionnotpossible.mixin",
+  "compatibilityLevel": "JAVA_17",
+  "mixins": [
+    "PlayerAttackMixin",
+    "EntitySpawnMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

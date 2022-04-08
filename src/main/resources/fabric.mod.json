@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "missionnotpossible",
+  "version": "${version}",
+  "name": "MissionNotPossible",
+  "description": "A crazy mod that makes Minecaft basically impossible to play",
+  "authors": ["Ilesh Thiada (theRookieCoder)"],
+  "contact": {
+    "email": "ileshkt@gmail.com",
+    "repo": "https://github.com/theRookieCoder/MissionNotPossible",
+    "issues": "https://github.com/theRookieCoder/MissionNotPossible/issues"
+  },
+  "license": "MPL-2.0",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "io.github.therookiecoder.missionnotpossible.MissionNotPossible"
+    ]
+  },
+  "mixins": [
+    "missionnotpossible.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=0.13.3",
+    "fabric": "*",
+    "minecraft": "1.18.2"
+  }
+}
