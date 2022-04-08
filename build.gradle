@@ -1,11 +1,10 @@
 plugins {
     id 'fabric-loom' version '0.12-SNAPSHOT'
+    id 'com.modrinth.minotaur' version '2.+'
 }
 
 version = project.mod_version
 group = project.maven_group
-
-repositories { }
 
 dependencies {
     // To change the versions see the gradle.properties file
@@ -27,15 +26,13 @@ processResources {
 def targetJavaVersion = 17
 tasks.withType(JavaCompile).configureEach {
     it.options.encoding = "UTF-8"
-    if (targetJavaVersion >= 10 || JavaVersion.current().isJava10Compatible()) {
-        it.options.release = targetJavaVersion
-    }
+    it.options.release = targetJavaVersion
 }
 
 java {
     def javaVersion = JavaVersion.toVersion(targetJavaVersion)
     if (JavaVersion.current() < javaVersion) {
-        toolchain.languageVersion = JavaLanguageVersion.of(targetJavaVersion)
+        toolchain.languageVersion = javaVersion
     }
     archivesBaseName = project.archives_base_name
     withSourcesJar()
@@ -45,4 +42,16 @@ jar {
     from("LICENSE") {
         rename { "${it}_${project.archivesBaseName}" }
     }
+}
+
+import com.modrinth.minotaur.dependencies.ModDependency
+modrinth {
+    token = System.getenv("MODRINTH_API_KEY")
+    projectId = "nid0mGrP"
+    versionNumber = version
+    versionType = "beta"
+    uploadFile = remapJar
+    gameVersions = ["1.18.2"]
+    loaders = ["fabric"]
+    dependencies = [new ModDependency("P7dR8mSH", "required")]
 }

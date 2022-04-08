@@ -7,7 +7,8 @@
   "authors": ["Ilesh Thiada (theRookieCoder)"],
   "contact": {
     "email": "ileshkt@gmail.com",
-    "repo": "https://github.com/theRookieCoder/MissionNotPossible",
+    "homepage": "https://modrinth.com/mod/missionnotpossible",
+    "sources": "https://github.com/theRookieCoder/MissionNotPossible",
     "issues": "https://github.com/theRookieCoder/MissionNotPossible/issues"
   },
   "license": "MPL-2.0",
