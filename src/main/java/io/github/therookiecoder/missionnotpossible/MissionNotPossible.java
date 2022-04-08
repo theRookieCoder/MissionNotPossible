@@ -7,12 +7,12 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
 
 public class MissionNotPossible implements ModInitializer {
-    public static final ItemStack helmet = new ItemStack(Items.NETHERITE_HELMET);
-    public static final ItemStack chestplate = new ItemStack(Items.NETHERITE_CHESTPLATE);
-    public static final ItemStack leggings = new ItemStack(Items.NETHERITE_LEGGINGS);
-    public static final ItemStack boots = new ItemStack(Items.NETHERITE_BOOTS);
-    public static final ItemStack sword = new ItemStack(Items.NETHERITE_SWORD);
-    public static final ItemStack bow = new ItemStack(Items.BOW);
+    public static final ItemStack helmet = Items.NETHERITE_HELMET.getDefaultStack();
+    public static final ItemStack chestplate = Items.NETHERITE_CHESTPLATE.getDefaultStack();
+    public static final ItemStack leggings = Items.NETHERITE_LEGGINGS.getDefaultStack();
+    public static final ItemStack boots = Items.NETHERITE_BOOTS.getDefaultStack();
+    public static final ItemStack sword = Items.NETHERITE_SWORD.getDefaultStack();
+    public static final ItemStack bow = Items.BOW.getDefaultStack();
 
     @Override
     public void onInitialize() {
