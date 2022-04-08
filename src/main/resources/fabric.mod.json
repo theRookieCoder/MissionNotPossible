@@ -11,6 +11,7 @@
     "issues": "https://github.com/theRookieCoder/MissionNotPossible/issues"
   },
   "license": "MPL-2.0",
+  "icon": "assets/missionnotpossible/logo.png",
   "environment": "*",
   "entrypoints": {
     "main": [
