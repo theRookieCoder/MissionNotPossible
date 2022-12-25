@@ -55,4 +55,6 @@ modrinth {
     gameVersions = [project.minecraft_version]
     loaders = ["fabric"]
     dependencies = [new ModDependency("P7dR8mSH", "required")]
+    changelog = "" // TODO
+    syncBodyFrom = rootProject.file("README.md").text
 }
